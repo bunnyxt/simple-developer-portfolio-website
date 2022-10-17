@@ -10,12 +10,12 @@ import userData from "@constants/data";
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Manu Arora - Developer, Writer, Creator"
-      description="This is a template built specifically for my blog - Creating a developer portfolio that gets you a job."
+      title="Jinyuan Liu a.k.a. bunnyxt - Full Stack Engineer with UI/UX experience"
+      description="Jinyuan Liu's personal portfolio for job seeking."
     >
       <Hero />
       <FavouriteProjects />
-      <LatestCode repositories={repositories} />
+      {/* <LatestCode repositories={repositories} /> */}
     </ContainerBlock>
   );
 }

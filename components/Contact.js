@@ -1,7 +1,25 @@
 import React from "react";
 import userData from "@constants/data";
+import axios from "axios";
 
 export default function Contact() {
+  const handleContactSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    const message = e.target[2].value;
+    axios
+      .post('https://qlhmogxubf.execute-api.us-west-1.amazonaws.com/default/contact_us_cb', { name, email, message })
+      .then((response) => {
+        console.log(response.data);
+        alert('Message sent! I will reach out you soon. Hope it would be a great start!');
+      })
+      .catch((error) => {
+        console.log(error);
+        alert('Fail to send message. Please try it again later! Sorry for the inconvenience.');
+      });
+  };
+
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased">
@@ -9,7 +27,7 @@ export default function Contact() {
           Contact
         </h1>
       </div>
-      <div className="relative z-10 rounded-md shadow-md bg-[#02044A] p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 -mt-4">
+      <div className="relative z-10 rounded-md shadow-md bg-[#0050B3] dark:bg-[#002766] p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 -mt-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="md:ml-4">
             <header className="">
@@ -21,13 +39,13 @@ export default function Contact() {
               </p>
             </header>
             <div className="icons-container inline-flex flex-col my-20">
-              <div className="flex flex-row items-center space-x-6 rounded-md border border-[#02044A] hover:border hover:border-blue-500 p-4">
+              <div className="flex flex-row items-center space-x-6 rounded-md border border-[#0050B3] dark:border-[#002766] hover:border hover:border-blue-500 dark:hover:border-blue-500 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  className="bi bi-telephone-fill h-4 w-4 text-blue-500"
+                  className="bi bi-telephone-fill h-4 w-4 text-white"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -39,13 +57,13 @@ export default function Contact() {
                   {userData.phone}
                 </p>
               </div>
-              <div className="flex flex-row items-center space-x-6 rounded-md border border-[#02044A] hover:border hover:border-blue-500 p-4">
+              <div className="flex flex-row items-center space-x-6 rounded-md border border-[#0050B3] dark:border-[#002766] hover:border hover:border-blue-500 dark:hover:border-blue-500 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  className="bi bi-envelope-fill h-4 w-4 text-blue-500"
+                  className="bi bi-envelope-fill h-4 w-4 text-white"
                   viewBox="0 0 16 16"
                 >
                   <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
@@ -54,13 +72,13 @@ export default function Contact() {
                   {userData.email}
                 </p>
               </div>
-              <div className="flex flex-row items-center space-x-6 rounded-md border border-[#02044A] hover:border hover:border-blue-500 p-4">
+              <div className="flex flex-row items-center space-x-6 rounded-md border border-[#0050B3] dark:border-[#002766] hover:border hover:border-blue-500 dark:hover:border-blue-500 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  className="bi bi-pin-fill h-4 w-4 text-blue-500"
+                  className="bi bi-pin-fill h-4 w-4 text-white"
                   viewBox="0 0 16 16"
                 >
                   <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z" />
@@ -72,7 +90,7 @@ export default function Contact() {
             </div>
             <div className="social-icons flex flex-row space-x-8">
               <a
-                href={userData.socialLinks.facebook}
+                href={userData.socialLinks.github}
                 className="h-10 w-10 rounded-full hover:bg-blue-500 flex items-center justify-center cursor-pointer"
               >
                 <svg
@@ -84,7 +102,7 @@ export default function Contact() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z"
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
                     fill="currentColor"
                   />
                 </svg>
@@ -97,14 +115,12 @@ export default function Contact() {
                   width="24"
                   height="24"
                   className="text-gray-50"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 16 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M8 3C9.10457 3 10 3.89543 10 5V8H16C17.1046 8 18 8.89543 18 10C18 11.1046 17.1046 12 16 12H10V14C10 15.6569 11.3431 17 13 17H16C17.1046 17 18 17.8954 18 19C18 20.1046 17.1046 21 16 21H13C9.13401 21 6 17.866 6 14V5C6 3.89543 6.89543 3 8 3Z"
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
                     fill="currentColor"
                   />
                 </svg>
@@ -141,7 +157,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <form className="form rounded-lg bg-white p-4 flex flex-col">
+          <form className="form rounded-lg bg-white p-4 flex flex-col" onSubmit={handleContactSubmit}>
             <label htmlFor="name" className="text-sm text-gray-600 mx-4">
               {" "}
               Your Name

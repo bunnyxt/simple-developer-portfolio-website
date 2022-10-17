@@ -10,7 +10,7 @@ export default function FavouriteProjects() {
             Favourite Projects
           </h1>
           <Link href="/projects">
-            <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700">
+            <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-100 dark:bg-gray-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -35,59 +35,59 @@ export default function FavouriteProjects() {
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
           {/* Single card */}
           <a
-            href="https://tailwindmasterkit.com"
+            href="/projects/medical-image-analysis-platform"
             className="w-full block col-span-3 shadow-2xl"
           >
             <div className="relative overflow-hidden">
               <img
-                src="/tmk.jpg"
-                alt="portfolio"
+                src="/medical-image-analysis-platform/mask-editor.png"
+                alt="medical-image-analysis-platform_mask-editor"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Tailwind Master Kit
+              <h1 className="absolute top-5 left-5 md:top-10 md:left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2">
+                Medical Image Analysis Platform
               </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+              <h1 className="absolute bottom-5 left-5 md:bottom-10 md:left-10 text-gray-50 font-bold text-xl">
                 01
               </h1>
             </div>
           </a>
           {/* Single card */}
           <a
-            href="https://placeholdertech.in"
+            href="https://tdd.bunnyxt.com"
             className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
           >
             <div className="relative overflow-hidden">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                src="/placeholdertech.png"
-                alt="portfolio"
+                src="/tiandian-daily/video-trending-line-chart.jpg"
+                alt="tiandian-daily_video-trending-line-chart.jpg"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                PlaceholderTech
+              <h1 className="absolute top-5 left-5 md:top-10 md:left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2">
+                TianDian Daily
               </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+              <h1 className="absolute bottom-5 left-5 md:bottom-10 md:left-10 text-gray-50 font-bold text-xl">
                 02
               </h1>
             </div>
           </a>
           {/* Single card */}
           <a
-            href="https://manuarora.in"
+            href="https://bunnyxt-tmdb.azurewebsites.net"
             className="w-full block col-span-3 sm:col-span-1  object-cover"
           >
             <div className="relative overflow-hidden shadow-2xl">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                src="/portfolio.png"
-                alt="portfolio"
+                src="/usc-films/homepage-carousel.jpg"
+                alt="usc-films_homepage-carousel"
                 className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
               />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Portfolio
+              <h1 className="absolute top-5 left-5 md:top-10 md:left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2">
+                USC Films
               </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+              <h1 className="absolute bottom-5 left-5 md:bottom-10 md:left-10 text-gray-50 font-bold text-xl">
                 03
               </h1>
             </div>
