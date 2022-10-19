@@ -1,22 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import userData from "@constants/data";
 import axios from "axios";
 
 export default function Contact() {
+  const [sending, setSending] = useState(false);
+
   const handleContactSubmit = (e) => {
     e.preventDefault();
     const name = e.target[0].value;
     const email = e.target[1].value;
     const message = e.target[2].value;
+    setSending(true);
     axios
-      .post('https://qlhmogxubf.execute-api.us-west-1.amazonaws.com/default/contact_us_cb', { name, email, message })
-      .then((response) => {
-        console.log(response.data);
+      .post('https://b61xou8zpg.execute-api.us-west-1.amazonaws.com/default/contact', { name, email, message })
+      .then(() => {
         alert('Message sent! I will reach out you soon. Hope it would be a great start!');
       })
       .catch((error) => {
         console.log(error);
         alert('Fail to send message. Please try it again later! Sorry for the inconvenience.');
+      })
+      .finally(() => {
+        setSending(false);
       });
   };
 
@@ -189,9 +194,14 @@ export default function Contact() {
             ></textarea>
             <button
               type="submit"
+              disabled={sending}
               className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
             >
-              Send Message
+              {
+                sending
+                  ? 'Sending...'
+                  : 'Send Message'
+              }
             </button>
           </form>
         </div>
