@@ -17,6 +17,20 @@ export default function ContainerBlock({ children, ...customMeta }) {
   return (
     <div>
       <Head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJW7RYF5YE"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TJW7RYF5YE', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
