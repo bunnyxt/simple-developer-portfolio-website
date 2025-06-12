@@ -38,12 +38,28 @@ const ProjectCard = ({ title, link, imgUrl, number }) => {
             className="transform hover:scale-125 transition duration-2000 ease-out object-cover h-full w-full"
           />
         </div>
-        <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2">
-          {title}
-        </h1>
-        <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+        <h3 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2 flex items-center space-x-2">
+          <span>{title}</span>
+          {link.startsWith("http") ? (
+            <svg
+              className="w-4 h-4 text-gray-50"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          ) : null}
+        </h3>
+        <span className="absolute bottom-10 left-10 md:bottom-10 md:left-10 text-white font-bold text-xl bg-black/30 backdrop-blur-sm rounded-lg px-3 py-1 border border-white/20">
           {number.length === 1 ? "0" + number : number}
-        </h1>
+        </span>
       </div>
     </a>
   );

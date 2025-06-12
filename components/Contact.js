@@ -12,13 +12,20 @@ export default function Contact() {
     const message = e.target[2].value;
     setSending(true);
     axios
-      .post('https://b61xou8zpg.execute-api.us-west-1.amazonaws.com/default/contact', { name, email, message })
+      .post(
+        "https://b61xou8zpg.execute-api.us-west-1.amazonaws.com/default/contact",
+        { name, email, message }
+      )
       .then(() => {
-        alert('Message sent! I will reach out you soon. Hope it would be a great start!');
+        alert(
+          "Message sent! I will reach out you soon. Hope it would be a great start!"
+        );
       })
       .catch((error) => {
         console.log(error);
-        alert('Fail to send message. Please try it again later! Sorry for the inconvenience.');
+        alert(
+          "Fail to send message. Please try it again later! Sorry for the inconvenience."
+        );
       })
       .finally(() => {
         setSending(false);
@@ -96,6 +103,7 @@ export default function Contact() {
             <div className="social-icons flex flex-row space-x-8">
               <a
                 href={userData.socialLinks.github}
+                target="_blank"
                 className="h-10 w-10 rounded-full hover:bg-blue-500 flex items-center justify-center cursor-pointer"
               >
                 <svg
@@ -114,24 +122,26 @@ export default function Contact() {
               </a>
               <a
                 href={userData.socialLinks.twitter}
+                target="_blank"
                 className="h-10 w-10 rounded-full hover:bg-blue-500 flex items-center justify-center cursor-pointer"
               >
                 <svg
                   width="24"
                   height="24"
                   className="text-gray-50"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
                     fill="currentColor"
                   />
                 </svg>
               </a>
               <a
                 href={userData.socialLinks.instagram}
+                target="_blank"
                 className="h-10 w-10 rounded-full hover:bg-blue-500 flex items-center justify-center cursor-pointer"
               >
                 <svg
@@ -162,46 +172,51 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <form className="form rounded-lg bg-white p-4 flex flex-col" onSubmit={handleContactSubmit}>
-            <label htmlFor="name" className="text-sm text-gray-600 mx-4">
+          <form
+            className="form rounded-lg bg-white dark:bg-gray-800 p-4 flex flex-col"
+            onSubmit={handleContactSubmit}
+          >
+            <label
+              htmlFor="name"
+              className="text-sm text-gray-600 dark:text-gray-300 mx-4"
+            >
               {" "}
               Your Name
             </label>
             <input
               type="text"
-              className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
+              className="font-light rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-blue-500 dark:focus:border-blue-400 ring-blue-500 dark:ring-blue-400"
               name="name"
             />
-            <label htmlFor="email" className="text-sm text-gray-600 mx-4 mt-4">
+            <label
+              htmlFor="email"
+              className="text-sm text-gray-600 dark:text-gray-300 mx-4 mt-4"
+            >
               Email
             </label>
             <input
               type="text"
-              className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
+              className="font-light rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-blue-500 dark:focus:border-blue-400 ring-blue-500 dark:ring-blue-400"
               name="email"
             />
             <label
               htmlFor="message"
-              className="text-sm text-gray-600 mx-4 mt-4"
+              className="text-sm text-gray-600 dark:text-gray-300 mx-4 mt-4"
             >
               Message
             </label>
             <textarea
               rows="4"
               type="text"
-              className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
+              className="font-light rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-blue-500 dark:focus:border-blue-400 ring-blue-500 dark:ring-blue-400"
               name="message"
             ></textarea>
             <button
               type="submit"
               disabled={sending}
-              className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
+              className="bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold transition-colors duration-200"
             >
-              {
-                sending
-                  ? 'Sending...'
-                  : 'Send Message'
-              }
+              {sending ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>

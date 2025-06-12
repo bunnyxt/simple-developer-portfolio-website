@@ -40,11 +40,15 @@ export default function Experience() {
 const ExperienceCard = ({ title, desc, year, company, companyLink }) => {
   return (
     <div className="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4">
-      <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800">
+      <span className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-300 font-bold dark:text-gray-700">
         {year}
-      </h1>
+      </span>
       <h1 className="font-semibold text-xl">{title}</h1>
-      <a href={companyLink} target="_blank" className="text-gray-500 hover:underline">
+      <a
+        href={companyLink}
+        target="_blank"
+        className="text-gray-500 hover:underline"
+      >
         {company}
       </a>
       <p className="text-gray-600 dark:text-gray-400 my-2">{desc}</p>

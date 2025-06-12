@@ -4,8 +4,6 @@ import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
 
 export default function Hero() {
-  const [uzuki, setUzuki] = useState(false);
-
   const colors = ["#F59E0B", "#84CC16", "#10B981", "#3B82F6"];
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
@@ -15,35 +13,32 @@ export default function Hero() {
         <RoughNotationGroup show={true}>
           <RainbowHighlight color={colors[0]}>
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Developer.
+              Developer
             </h1>
           </RainbowHighlight>
           <RainbowHighlight color={colors[1]}>
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Designer.
+              Designer
             </h1>
           </RainbowHighlight>
           <RainbowHighlight color={colors[2]}>
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Programmer.
+              Creator
             </h1>
           </RainbowHighlight>
           <RainbowHighlight color={colors[3]}>
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Coder.
+              Innovator
             </h1>
           </RainbowHighlight>
         </RoughNotationGroup>
       </div>
       {/* Image container */}
-      <div className="hidden lg:block relative w-full md:w-1/2 -mr-40 mt-20">
-        <div className="w-3/4 group">
-          {
-            uzuki
-              ? <img src={userData.uzukiAvatarUrl} alt="uzuki_avatar" className="shadow " />
-              : <img src={userData.avatarUrl} alt="avatar" className="shadow " />
-          }
-          <div className="flex flex-row justify-between mt-4">
+      <div className="relative w-full md:w-1/2 -mr-40 mt-20">
+        <div className="w-1/2 md:w-3/5 group">
+          <img src={userData.avatarUrl} alt="avatar" className="shadow " />
+          {/* TODO: show on mobile */}
+          <div className="hidden md:flex flex-row justify-between mt-4">
             <div className="flex flex-row space-x-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,18 +55,23 @@ export default function Hero() {
               </svg>
               <p className="font-mono">
                 <span>
-                  {
-                    uzuki
-                      ? <>That's me as well! I'm a big fan of <a className="text-blue-500" href="https://en.wikipedia.org/wiki/Lolita_fashion" target="_blank">Lolita Fashion</a> and enjoy dressing up in my <a className="text-blue-500" href={userData.socialLinks.instagram} target="_blank">daily life</a>.</>
-                      : <>That's me.</>
-                  }
-                </span>
-                <span className="hidden group-hover:inline-block ml-2 cursor-pointer text-blue-500">
-                  {
-                    uzuki
-                      ? <a onClick={() => setUzuki(false)}>back</a>
-                      : <a onClick={() => setUzuki(true)}>Interested in side B?</a>
-                  }
+                  I'm a big fan of{" "}
+                  <a
+                    className="text-blue-500"
+                    href="https://en.wikipedia.org/wiki/Lolita_fashion"
+                    target="_blank"
+                  >
+                    Lolita Fashion
+                  </a>{" "}
+                  and enjoy dressing up in my{" "}
+                  <a
+                    className="text-blue-500"
+                    href={userData.socialLinks.instagram}
+                    target="_blank"
+                  >
+                    daily life
+                  </a>
+                  .
                 </span>
               </p>
             </div>

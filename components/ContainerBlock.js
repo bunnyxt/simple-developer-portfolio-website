@@ -8,8 +8,8 @@ export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
 
   const meta = {
-    title: "Jinyuan Liu a.k.a. bunnyxt - Full Stack Engineer with UI/UX experience",
-    description: `Jinyuan Liu's personal portfolio for job seeking.`,
+    title: "Jinyuan Liu a.k.a. bunnyxt - Frontend and Full Stack Engineer",
+    description: "Jinyuan Liu's portfolio for job seeking.",
     image: "/bunnyxt.jpg",
     type: "website",
     ...customMeta,
@@ -18,7 +18,10 @@ export default function ContainerBlock({ children, ...customMeta }) {
     <div>
       <Head>
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJW7RYF5YE"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-TJW7RYF5YE"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -38,10 +41,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           property="og:url"
           content={`https://bunnyxt.com${router.asPath}`}
         />
-        <link
-          rel="canonical"
-          href={`https://bunnyxt.com${router.asPath}`}
-        />
+        <link rel="canonical" href={`https://bunnyxt.com${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Jinyuan Liu a.k.a. bunnyxt" />
         <meta property="og:description" content={meta.description} />

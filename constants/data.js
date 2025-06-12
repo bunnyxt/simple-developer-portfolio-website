@@ -1,12 +1,12 @@
 const userData = {
   githubUsername: "bunnyxt",
   name: "Jinyuan Liu",
-  designation: "Full Stack Engineer",
+  designation: "Software Development Engineer",
   avatarUrl: "/avatar.jpg",
   uzukiAvatarUrl: "/uzuki_avatar.jpg",
   email: "bunnyxt@outlook.com",
   phone: "+1 (213) 709-2690",
-  address: "Los Angeles, CA",
+  address: "San Francisco Bay Area, CA",
   projects: [
     {
       title: "Medical Image Analysis Platform",
@@ -18,20 +18,26 @@ const userData = {
       link: "https://tdd.bunnyxt.com",
       imgUrl: "/tiandian-daily/video-trending-line-chart.jpg",
     },
+    // TODO: add back when I deploy the website again
+    // {
+    //   title: "USC Films",
+    //   link: "https://bunnyxt-tmdb.azurewebsites.net",
+    //   imgUrl: "/usc-films/homepage-carousel.jpg",
+    // },
     {
-      title: "USC Films",
-      link: "https://bunnyxt-tmdb.azurewebsites.net",
-      imgUrl: "/usc-films/homepage-carousel.jpg",
-    },
-    {
-      title: "Tencent Virtual Tour",
-      link: "https://vt.tencent.com/tour/qidian",
-      imgUrl: "/tencent-virtual-tour/stand-view.jpg",
+      title: "Nium Portal",
+      link: "https://docs.nium.com/docs/portal-reports",
+      imgUrl: "/nium-portal/transactions-page.png",
     },
     {
       title: "LCid",
       link: "https://lcid.cc/",
       imgUrl: "/lcid/card.jpg",
+    },
+    {
+      title: "Tencent Virtual Tour",
+      link: "https://vt.tencent.com/tour/qidian",
+      imgUrl: "/tencent-virtual-tour/stand-view.jpg",
     },
     {
       title: "Tencent Media Lab Website",
@@ -40,6 +46,13 @@ const userData = {
     },
   ],
   experience: [
+    {
+      title: "Software Development Engineer",
+      company: "Nium",
+      year: "2023",
+      companyLink: "https://www.nium.com/",
+      desc: "Build Nium's modern web portal with React, TypeScript, and Tailwind CSS. As one of the first frontend engineers at the company, I've been instrumental in establishing our modern frontend infrastructure from scratch over the past two years, working closely with our Staff Engineer TL to build component libraries, project architecture, and development workflows.",
+    },
     {
       title: "Full Stack Engineer Intern",
       company: "Tencent America - Tencent Media Lab",
