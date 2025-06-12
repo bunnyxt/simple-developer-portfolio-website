@@ -221,8 +221,11 @@ export default function AboutMe() {
             </p>
             <p className="text-xl text-gray-700 mb-4 dark:text-gray-300">
               I have 3 years of full time working{" "}
-              <Link href="/experience">
-                <a className="text-blue-500 hover:underline">experience</a>
+              <Link
+                href="/experience"
+                className="text-blue-500 hover:underline"
+              >
+                experience
               </Link>{" "}
               using TypeScript, React, NextJS, Python, NodeJS, Vue, and more.
               Not only solid tech skills but also cooperation and communication
@@ -231,8 +234,8 @@ export default function AboutMe() {
             <p className="text-xl text-gray-700 mb-4 dark:text-gray-300">
               Besides, as a big fan of web technologies, in the past 6 years, I
               initiated lots of side{" "}
-              <Link href="/projects">
-                <a className="text-blue-500 hover:underline">projects</a>
+              <Link href="/projects" className="text-blue-500 hover:underline">
+                projects
               </Link>{" "}
               and familiar with the whole process of web development, from UI
               design, frontend implementation, backend architecture, cloud
@@ -241,8 +244,8 @@ export default function AboutMe() {
             <p className="text-xl text-gray-700 mb-4 dark:text-gray-300">
               Now, I'm actively looking for mid-level SDE roles. If you are
               interested in me, feel free to{" "}
-              <Link href="/contact">
-                <a className="text-blue-500 hover:underline">contact</a>
+              <Link href="/contact" className="text-blue-500 hover:underline">
+                contact
               </Link>{" "}
               me!
             </p>
