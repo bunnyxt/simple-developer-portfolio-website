@@ -35,7 +35,7 @@ export default function BriefAboutMe() {
         </header>
 
         <div className="flex flex-col md:flex-row justify-between items-center md:my-20 lg:my-0 -translate-y-8">
-          <div className="w-full p-10 md:p-20 max-w-6xl mx-auto bg-gray-200 dark:bg-gray-700">
+          <div className="w-full p-10 md:p-20 max-w-6xl mx-auto bg-gray-200 dark:bg-gray-700 shadow-2xl">
             <p className="text-xl text-gray-500 dark:text-gray-300 mb-4">
               I'm a Fullstack Frontend Software Engineer that loves building
               products with high impact from scratch.
