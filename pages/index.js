@@ -6,6 +6,7 @@ import LatestCode from "../components/LatestCode";
 import Hero from "../components/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
+import BriefAboutMe from "@components/BriefAboutMe";
 
 export default function Home({ repositories }) {
   return (
@@ -14,6 +15,7 @@ export default function Home({ repositories }) {
       description="Jinyuan Liu's portfolio for job seeking."
     >
       <Hero />
+      <BriefAboutMe />
       <FavoriteProjects />
       {/* <LatestCode repositories={repositories} /> */}
     </ContainerBlock>

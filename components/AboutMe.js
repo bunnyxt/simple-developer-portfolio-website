@@ -90,8 +90,8 @@ export default function AboutMe() {
             className="leading-loose text-2xl md:text-4xl font-semibold  mx-4"
             style={{ lineHeight: "3rem" }}
           >
-            I'm a frontend focused full stack software developer that loves
-            building products with high impact from scratch.
+            I'm a Fullstack Frontend Software Engineer that loves building
+            products with high impact from scratch.
           </p>
         </div>
       </div>
