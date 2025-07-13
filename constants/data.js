@@ -82,8 +82,6 @@ const userData = {
       desc: "Built automatic analysis pipelines for bioinformatic tasks and biological data visualization for manual checking and sharing.",
     },
   ],
-  resumeUrl:
-    "https://drive.google.com/file/d/1ZaZI6xz5P4kH1H-3tXzT3anGMA2nu4f-/view?usp=sharing",
   socialLinks: {
     instagram: "https://instagram.com/hime_uzuki",
     twitter: "https://twitter.com/bunnyxt29",
