@@ -9,7 +9,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
 
   const meta = {
     title: "Jinyuan Liu a.k.a. bunnyxt - Frontend and Full Stack Engineer",
-    description: "Jinyuan Liu's portfolio for job seeking.",
+    description: "Jinyuan Liu's portfolio",
     image: "/bunnyxt.jpg",
     type: "website",
     ...customMeta,

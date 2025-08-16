@@ -104,8 +104,9 @@ export default function AboutMe() {
                 Contact
               </h1>
               <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                I'm looking for a job currently. If you see me as a good fit,
-                feel free to{" "}
+                I'm always open to interesting opportunities and collaborations.
+                If you'd like to connect or discuss potential projects, feel
+                free to{" "}
                 <Link
                   href="/contact"
                   className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
@@ -226,8 +227,9 @@ export default function AboutMe() {
               services, DevOps, etc.
             </p>
             <p className="text-xl text-gray-700 mb-4 dark:text-gray-300">
-              Now, I'm actively looking for mid-level SDE roles. If you are
-              interested in me, feel free to{" "}
+              I'm always open to interesting opportunities and collaborations.
+              If you'd like to connect or discuss potential projects, feel free
+              to{" "}
               <Link href="/contact" className="text-blue-500 hover:underline">
                 contact
               </Link>{" "}

@@ -12,7 +12,7 @@ export default function Home({ repositories }) {
   return (
     <ContainerBlock
       title="Jinyuan Liu a.k.a. bunnyxt - Frontend and Full Stack Engineer"
-      description="Jinyuan Liu's portfolio for job seeking."
+      description="Jinyuan Liu's portfolio"
     >
       <Hero />
       <BriefAboutMe />

@@ -51,7 +51,7 @@ export default function Contact() {
               </p>
             </header>
             <div className="icons-container inline-flex flex-col my-20">
-              <div className="flex flex-row items-center space-x-6 rounded-md border border-[#0050B3] dark:border-[#002766] hover:border hover:border-blue-500 dark:hover:border-blue-500 p-4">
+              {/* <div className="flex flex-row items-center space-x-6 rounded-md border border-[#0050B3] dark:border-[#002766] hover:border hover:border-blue-500 dark:hover:border-blue-500 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -83,7 +83,7 @@ export default function Contact() {
                 <p className="text-gray-50 font-light text-sm">
                   {userData.email}
                 </p>
-              </div>
+              </div> */}
               <div className="flex flex-row items-center space-x-6 rounded-md border border-[#0050B3] dark:border-[#002766] hover:border hover:border-blue-500 dark:hover:border-blue-500 p-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
