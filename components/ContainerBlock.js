@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Script from "next/script";
 import { useRouter } from "next/router";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -17,23 +18,6 @@ export default function ContainerBlock({ children, ...customMeta }) {
   return (
     <div>
       <Head>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-TJW7RYF5YE"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-TJW7RYF5YE', {
-                page_path: window.location.pathname,
-              });
-            `,
-          }}
-        />
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
@@ -56,6 +40,18 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-TJW7RYF5YE"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-TJW7RYF5YE', {
+            page_path: window.location.pathname,
+          });`}
+      </Script>
       <main className="dark:bg-gray-800 w-full">
         <Navbar />
         <div>{children}</div>
