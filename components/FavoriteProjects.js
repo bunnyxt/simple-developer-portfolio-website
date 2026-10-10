@@ -45,7 +45,7 @@ export default function FavoriteProjects() {
               <img
                 src="/medical-image-analysis-platform/mask-editor.png"
                 alt="medical-image-analysis-platform_mask-editor"
-                className="transform hover:scale-125 transition duration-2000 ease-out"
+                className="transform hover:scale-125 transition duration-[2000ms] ease-out"
               />
               <h3 className="absolute top-5 left-5 md:top-10 md:left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2">
                 Medical Image Analysis Platform
@@ -66,7 +66,7 @@ export default function FavoriteProjects() {
               <img
                 src="/tiandian-daily/video-trending-line-chart.jpg"
                 alt="tiandian-daily_video-trending-line-chart.jpg"
-                className="transform hover:scale-125 transition duration-2000 ease-out"
+                className="transform hover:scale-125 transition duration-[2000ms] ease-out"
               />
               <h3 className="absolute top-5 left-5 md:top-10 md:left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2 flex items-center space-x-2">
                 <span>TianDian Daily</span>
@@ -101,7 +101,7 @@ export default function FavoriteProjects() {
               <img
                 src="/usc-films/homepage-carousel.jpg"
                 alt="usc-films_homepage-carousel"
-                className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
+                className="transform hover:scale-125 transition duration-[2000ms] ease-out object-cover shadow-2xl"
               />
               <h1 className="absolute top-5 left-5 md:top-10 md:left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2">
                 USC Films
@@ -122,7 +122,7 @@ export default function FavoriteProjects() {
               <img
                 src="/nium-portal/transactions-page.png"
                 alt="nium-portal-transactions-page"
-                className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
+                className="transform hover:scale-125 transition duration-[2000ms] ease-out object-cover shadow-2xl"
               />
               <h3 className="absolute top-5 left-5 md:top-10 md:left-10 text-gray-50 font-bold text-xl bg-blue-500 rounded-md px-2 flex items-center space-x-2">
                 <span>Nium Portal</span>
