@@ -30,5 +30,3 @@ The contact form posts to an existing external AWS endpoint. Its availability an
 Import this repository as a Vercel project, or reconnect its existing Git integration. Use the Next.js framework preset, the default build command (`npm run build`), and Node.js 24. The `engines.node` field pins Node.js 24 for Vercel builds. No environment variables are needed for the current pages.
 
 Push changes to the production branch configured in Vercel. Before assigning the domain, verify `/`, `/about`, `/projects`, `/experience`, `/contact`, and `/projects/medical-image-analysis-platform` on the deployment preview, including the theme toggle and contact submission.
-
-GitHub Actions runs `npm ci` and `npm run build` on pushes and pull requests to `main`.
