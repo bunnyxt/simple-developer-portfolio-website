@@ -4,7 +4,7 @@ This portfolio now runs on Node.js 24, Next.js 16 (Pages Router), React 19, and 
 
 For local development, use `nvm use`, `npm ci`, and `npm run dev`. Run `npm run build` before deploying. The development and build scripts use Webpack explicitly. No environment variables are required for the portfolio pages.
 
-Vercel builds a Preview deployment for changes pushed to a non-production branch or opened as a pull request. The contact form still sends to its existing external AWS endpoint, so verify a submission in the Preview before merging. The original template documentation is preserved below.
+Vercel builds a Preview deployment for changes pushed to a non-production branch or opened as a pull request. The Contact page uses existing social links instead of a message form. The original template documentation is preserved below.
 
 ## Portfolio Website For Developers 💯
 
