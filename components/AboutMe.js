@@ -1,4 +1,5 @@
 import React from "react";
+import USFootprint from "./USFootprint";
 import Link from "next/link";
 import userData from "@constants/data";
 
@@ -252,6 +253,7 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
+        <USFootprint />
       </div>
     </section>
   );

@@ -1,0 +1,13 @@
+.shape {
+  stroke: #000;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill-rule: evenodd;
+}
+
+.labels {
+  pointer-events: none;
+  user-select: none;
+  font-family: Arial, sans-serif;
+}
