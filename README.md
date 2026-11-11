@@ -1,3 +1,27 @@
+## US travel map
+
+The About page's interactive SVG map reads its travel levels from
+`constants/us-footprint.json`. Set a two-letter state or territory code to a
+number from 0 to 5, or to `"want"`:
+
+```json
+{
+  "CA": 5,
+  "NY": 3,
+  "TX": "want"
+}
+```
+
+Levels: 5 = lived, 4 = stayed, 3 = visited, 2 = stopped, 1 = passed,
+0 = never visited. `"want"` marks a future destination and scores zero.
+Unlisted regions default to 0. The displayed colors, region details, and total
+score are derived from this configuration. Commit and push changes to update
+the deployed map. Visitors can explore the map without changing the owner's data.
+
+Run `npm test` and `npm run build` to validate changes. Geometry is adapted from
+[tenpages/us-level](https://github.com/tenpages/us-level); its MIT notice is kept
+in `public/licenses/us-level.txt`.
+
 ## 2026 maintenance update
 
 This portfolio now runs on Node.js 24, Next.js 16 (Pages Router), React 19, and Tailwind CSS 4. The upgrade also refreshed the dependency lockfile, moved Google Analytics to `next/script`, and removed an unused GitHub repository request that logged the GitHub token and prevented static rendering of the home page.

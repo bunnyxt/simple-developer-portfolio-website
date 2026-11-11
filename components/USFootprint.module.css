@@ -1,0 +1,37 @@
+.map {
+  --map-unvisited: #fff;
+  --map-unvisited-text: #111827;
+  --map-border: #111827;
+}
+
+:global(.dark) .map {
+  --map-unvisited: #374151;
+  --map-unvisited-text: #f3f4f6;
+  --map-border: #9ca3af;
+}
+
+.region {
+  cursor: pointer;
+  outline: none;
+}
+
+.shape {
+  stroke: var(--map-border);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill-rule: evenodd;
+}
+
+.region:hover .shape,
+.region:focus-visible .shape,
+.region[aria-pressed="true"] .shape {
+  stroke: #2563eb;
+  stroke-width: 6;
+}
+
+.labels {
+  pointer-events: none;
+  user-select: none;
+  font-family: Arial, sans-serif;
+}

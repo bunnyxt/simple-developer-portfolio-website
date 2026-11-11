@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import USFootprint from "./USFootprint";
 import Link from "next/link";
 import userData from "@constants/data";
 
@@ -253,50 +253,7 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-        <section
-          aria-labelledby="us-footprint-heading"
-          className="max-w-6xl mx-auto pt-16 pb-20"
-        >
-          <h2
-            id="us-footprint-heading"
-            className="bg-blue-500 text-3xl rounded-md px-2 py-1 inline-block font-bold text-gray-50"
-          >
-            My US Footprint
-          </h2>
-          <p className="text-xl text-gray-700 mt-4 dark:text-gray-300">
-            Places I've lived in, visited, or passed through across the US.
-          </p>
-          <figure className="max-w-3xl mx-auto mt-8">
-            <a
-              href="/us-footprint.png"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open my US travel map at full size in a new tab"
-              className="block rounded-xl overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500"
-            >
-              <Image
-                src="/us-footprint.png"
-                alt="My US travel map with states colored by travel experience, from living in California to visiting or passing through other states. Total score: 47."
-                width={1600}
-                height={1600}
-                sizes="(max-width: 800px) calc(100vw - 32px), 768px"
-                className="w-full h-auto"
-              />
-            </a>
-            <figcaption className="text-sm text-gray-500 mt-3 text-center dark:text-gray-400">
-              Click the map to view it at full size. Made with{" "}
-              <a
-                href="https://tenpages.netlify.app/us-level/us.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-blue-500"
-              >
-                US Level
-              </a>
-              .
-            </figcaption>
-          </figure>
-        </section>
+        <USFootprint />
       </div>
     </section>
   );
