@@ -12,8 +12,8 @@ test("the saved footprint renders all 56 regions and reproduces the image's 47 p
   assert.equal(footprint.totalScore, 47);
   assert.equal(footprint.regions.length, 56);
   assert.equal(new Set(footprint.regions.map(({ code }) => code)).size, 56);
-  assert.equal(footprint.regions.find(({ code }) => code === "CA").levelLabel, "Lived here");
-  assert.equal(footprint.regions.find(({ code }) => code === "IL").levelLabel, "Stopped here");
+  assert.equal(footprint.regions.find(({ code }) => code === "CA").levelLabel, "Lived Here");
+  assert.equal(footprint.regions.find(({ code }) => code === "IL").levelLabel, "Stopped Here");
   for (const region of footprint.regions) {
     assert.ok(region.path.length > 0);
     assert.ok(Number.isFinite(region.label.x));
@@ -26,7 +26,7 @@ test("editing a state's config updates its color, label, and the calculated scor
   const after = createFootprint({ ...config, TX: 5 }, regions);
   const texas = after.regions.find(({ code }) => code === "TX");
   assert.equal(after.totalScore, 52);
-  assert.equal(texas.levelLabel, "Lived here");
+  assert.equal(texas.levelLabel, "Lived Here");
   assert.equal(texas.color, "#ff7e7e");
   assert.notEqual(texas.color, before.regions.find(({ code }) => code === "TX").color);
   assert.equal(config.TX, undefined);
@@ -38,9 +38,9 @@ test("want-to-go and unvisited places have distinct colors and both score zero",
   const california = footprint.regions.find(({ code }) => code === "CA");
   const oregon = footprint.regions.find(({ code }) => code === "OR");
   assert.equal(footprint.totalScore, 0);
-  assert.equal(texas.levelLabel, "Want to go");
+  assert.equal(texas.levelLabel, "Want to be Here");
   assert.notEqual(texas.color, california.color);
-  assert.equal(oregon.levelLabel, "Never been here");
+  assert.equal(oregon.levelLabel, "Never Been Here");
 });
 
 test("configuration typos fail clearly instead of publishing an incorrect map", () => {
